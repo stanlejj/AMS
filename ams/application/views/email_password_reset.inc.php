@@ -54,7 +54,7 @@ at helpdesk@tntemple.edu or via the web at http://support.tntemple.edu.
 		'value'     =>      $message
 	);
 ?>
-
+<!-- test comment -->
 <!-- This contains the hidden content for inline calls -->
 <div style='display:none'>
 	<div id='email_confirmation' style='padding:10px; background:#fff;'>
