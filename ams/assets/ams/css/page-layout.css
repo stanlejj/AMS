@@ -1,0 +1,716 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height:100%;
+}
+a{
+	text-decoration:none;
+}
+#page_wrapper {
+	min-height:100%;
+	position:relative;
+}
+#page_header,#page_content,#page_footer{
+	min-width:1024px;
+}
+#page_header {
+	height:110px;
+	border-bottom: 1px solid #BE0100;
+}
+#nav_menu{
+	background: #970100;
+	height:50px;
+}
+#page_content {
+	padding-bottom:150px;   /* Height of the footer element */
+	background: #DADADA url(../images/bg_general.png) center no-repeat;
+}
+#page_footer {
+	width:100%;
+	height:150px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.footer-sections{
+	margin-top: 20px;
+	text-align: center;
+	color:#fff;	
+	font-size: 0.8em;
+}
+.footer-sections a{
+	color: #e0ff00;
+}
+.center-layout{
+	width:980px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#content_wrapper{
+	background: #E8E8E8;
+	height: 100%;
+	min-height:655px;
+	-webkit-box-shadow: 0px 0px 65px rgba(100, 100, 100, 0.89);
+	-moz-box-shadow:    0px 0px 65px rgba(100, 100, 100, 0.89);
+	box-shadow:         0px 0px 65px rgba(100, 100, 100, 0.89);
+}
+
+#credential{
+	text-align:right;
+}
+
+#logo_heading{
+	padding-top:30px;
+}
+
+#logo{
+	padding-top: 5px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 2px #FFFFFF solid;
+	height: 40px;
+	line-height: 48px;
+	float:left;
+	width: 170px;
+}
+#logo_title{
+	padding-top: 12px;
+	float:left;
+	width: 660px;
+}
+
+/*Navigation Section*/
+#nav {
+	margin: 0;
+	padding: 7px 6px 0;
+	line-height: 100%;
+}
+#nav li {
+	margin: 0 5px;
+	padding-bottom: 12px;/*to reach the top edge of the submenu*/
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+
+/* main level link */
+#nav a {
+	font-weight: bold;
+	color: #E0FF00;
+	text-decoration: none;
+	display: block;
+	padding:  8px 20px;
+	margin: 0;
+	text-shadow: 0 1px 1px rgba(100,100,100, .6);	
+}
+
+/*
+#nav a:hover {
+	border-bottom: solid 1px #DADADA;	
+}
+*/
+
+/* main level link hover */
+#nav .current a, #nav li:hover > a {
+	color: #fff;
+	text-shadow: 0 1px 0 rgba(100,100,100, 1);
+}
+
+/* sub levels link hover */
+
+#nav ul li:hover a, #nav li:hover li a {
+	background: none;
+	border: none;
+	color: #666;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+}
+
+#nav ul a:hover {
+	background: #f7f7f7 !important;
+	color: #CA7F0B !important;
+	text-shadow: 0 1px 1px rgba(0,0,0, .1);
+}
+
+/* dropdown */
+#nav li:hover > ul {
+	display: block;
+}
+
+/* level 2 list */
+#nav ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	width: 185px;
+	position: absolute;
+	top: 43px;
+	left: 0;
+	background: #fdfdfd;
+	border: solid 1px #b4b4b4;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	z-index: 999;
+}
+#nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #DADADA;
+}
+
+#nav ul a {
+	font-weight: normal;
+	text-shadow: 0 1px 0 #dadada;
+}
+
+/* level 3+ list */
+
+#nav ul ul {
+	left: 179px;
+	top: -3px;
+}
+
+/**********************************************************************/
+/******************************* Global********************************/
+/**********************************************************************/
+
+.title{
+	text-align:center;
+}
+
+input[type="text"], input[type="password"]{
+	border: 0;
+	-webkit-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 28px;
+	padding-left:5px;
+}
+
+.plain-button{
+	background: none;
+	color: #3B3B3B;
+	border:none;
+}
+.plain-button:hover{
+	cursor:pointer;
+}
+
+label{
+	display:block;
+	margin-bottom: 4px;
+}
+
+.waiting-panel{
+	position:absolute;
+	top:0;
+	left:230px;
+	display:none;
+}
+
+.table-header{
+	background: #3B3B3B;
+	color: #fff;
+}
+
+/* slideout tab */ 
+.filter{
+	width:100%;
+	position: relative;
+	border-top:none;
+	border-bottom:none;
+	font-size: 0.8em;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background:none;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+.filter-tab li{
+	list-style-type:none;
+	position: absolute;
+	height:100px;
+	left:1px;
+	width:40px;
+	border: 2px solid #AEAEAE;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-left:none;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+.filter-selection{
+	position: absolute;
+	top:0;
+	left:0;
+	display:none;
+	width:0;
+	height:200px;
+	overflow:hidden;
+	padding-left:60px;
+	border-top: 2px solid #BABABA;
+	border-bottom: 2px solid #BABABA;
+	border-right: 2px solid #BABABA;
+	z-index: 500;
+	background: #fff;
+}
+
+.filter-selection > div{
+	margin: 20px 0 0 70px;
+}
+
+.main-instruction{
+	padding-top: 50px;
+	width: 57%;
+	text-align: center;
+	float:left;
+}
+/* END slideout tab */
+
+/* side blocks */
+.sideblock{
+	float: right; 
+	height: 200px; 
+	width: 365px; 
+	border: 2px solid #BABABA; 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	right: 30px;
+	background: #fff;
+}
+
+.sideblock-header{
+	padding:7px 0px 7px 10px;
+	
+	/* to cover the border*/
+	z-index:10;
+	position:relative;
+	width:357px;
+	left:-2px;
+	top:-2px;
+	/* end cover */
+}	
+.sideblock-content{
+	overflow: auto; 
+	height:150px; 
+	margin-left: 15px;
+	margin-top:10px;
+}
+/* END sideblock */
+
+/* report */
+.report{
+	font-size: 0.8em;
+	margin-top: 1.5em;
+}
+
+.report-content{
+	overflow: auto;
+	height: 300px;
+}
+/* END report*/
+
+/** Dropdown **/
+select {
+    border: 0 none;
+    color: #3B3B3B;
+    background: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 250px;
+    height: 30px;
+    *width: 270px;
+    *background: #DADADA;
+    position: relative;
+    top: -1px;
+    left: -1px;
+}
+
+.select-wrapper {
+	margin-top:10px;
+    overflow: hidden;
+    width: 248px;
+    height: 28px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 1px 1px 11px #000;
+    background: no-repeat scroll 319px 5px #DADADA;
+}
+
+/* END dropdown styling */
+/**********************************************************************/
+/***************************** Login Page *****************************/
+/**********************************************************************/
+
+.login-wrapper div{
+	float:left;
+}
+
+.login-wrapper div img{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:70px;
+	display: block;
+	-webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.75);
+}
+
+.left-icons,.right-icons{
+	width:30%;
+}
+
+.login-background{
+	width:100%;
+	height: 300px;
+	position:relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 20px rgba(50, 50, 50, 0.65);
+	-moz-box-shadow:    0px 0px 20px rgba(50, 50, 50, 0.65);
+	box-shadow:         0px 0px 20px rgba(50, 50, 50, 0.65);
+	background: #fff;
+}
+
+.login-form{
+	width:40%;
+	text-align:center;
+	padding-top: 40px;
+}
+
+.login-form h2{
+	margin-bottom: 40px;
+}
+
+.login-form input[placeholder]{
+	height: 35px;
+	width: 80%;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:10px;
+	border: 0;	
+	font-size: 1.2em;
+	display:block;
+	margin-bottom: 20px;
+}
+
+#btn_login{
+	background: url(../images/btn_login.png);
+	border: none;
+	width: 175px;
+	height: 50px;
+	cursor: pointer;
+	margin-top:20px;
+}
+#forgot_password{
+	height:40px;
+	position:relative;
+	top: 15px;
+	left: 15px;
+	color: #555;
+}
+
+/**********************************************************************/
+/*********************** Password Reset Page **************************/
+/**********************************************************************/
+
+#filter_password{
+	height:200px;
+}
+
+#properties{
+	top:0px; 
+	background: url(../images/tab_filter.png);
+}
+
+#values{
+	top:100px; 
+	background: url(../images/tab_value.png);
+}
+ 
+#policy, #filter_result, #reset_password{
+	height: 300px;
+}
+
+#matched_accounts tr{
+	height: 30px;	
+}
+#matched_accounts tr:hover{
+	cursor:pointer;
+	background: #58B14C;
+}
+#matched_accounts td{
+	padding-left: 5px;
+	width: 130px;
+}
+
+#matched_accounts td.account-exist{
+	width: 100px;
+}
+
+#password_history td{
+	width: 105px;
+	text-align: center;
+}
+
+#reset_info{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#reset_password div{
+	margin: 15px 0 0 15px;
+}
+
+#reset_password .left{
+	width: 400px;
+	height: 80%;
+	border-right: 2px solid #5B5B5B;
+	float:left;
+	position: relative;
+}
+
+#reset_password .left > div{
+	margin: 0;
+	position: absolute;
+	width: 400px;
+}
+
+#reset_password .right{
+	float:left;
+	left: 420px;
+	margin-left: 20px;
+	height: 80%;	
+}
+
+/*overwrite validation error message*/
+#validate_passwd_reset .formError .formErrorContent
+{
+	left: 10px;
+	top: 25px;
+}
+#validate_passwd_reset .formError .formErrorArrow
+{
+	display:none;
+}
+/**************** Email Confirmation Template **********************/
+
+div.heading{
+	text-align:center;
+	font-size: 1.3em;
+	color: blue;
+	margin-bottom: 1em;
+}
+
+div.inline_block{
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-right: 20px;
+}
+
+div.inline{
+	margin-bottom: 5px;
+	float: left;
+	width: 300px;
+}
+
+div.inline label{
+	width: 60px;
+	float: left;
+	text-align: left;
+	clear: left;                    
+}
+
+div.inline input{
+	/*Overwrite global*/
+	width: 180px;
+	border-bottom: 1px solid #3B3B3B;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	height: 25px;
+}
+
+div.button_row{                  
+	clear:both;
+	text-align:center;
+}
+div.button_row input{
+	width: 100px;
+	margin-left: 1em;                
+}	
+
+#txtMessage{
+	width: 100%;
+}
+
+
+/**********************************************************************/
+/*********************** Single Account Page **************************/
+/**********************************************************************/
+
+#account_info{
+	height: 700px;
+}
+
+#general{
+	top:0px; 
+	background: url(../images/tab_general.png);
+}
+
+#ad_attr{
+	top:100px; 
+	background: url(../images/tab_ad.png);
+}
+
+#moodle_attr{
+	top:200px; 
+	background: url(../images/tab_moodle.png);
+}
+
+#gmail_attr{
+	top:300px; 
+	background: url(../images/tab_gmail.png);
+}
+
+#info_general, #info_ad, #info_moodle, #info_gmail{
+	height: 690px;
+}
+
+.clear-float{
+	clear:both;
+	height: 40px;
+}
+
+.button-row{
+	width: 100%;
+	text-align:center;
+}
+
+/**********************************************************************/
+/*********************** Bulk Account Upload Page *********************/
+/**********************************************************************/
+
+#upload_alert.sideblock{
+	height: 690px;
+}
+
+.account-nav{
+	width: 100%;
+	text-align:center;
+	line-height: 40px;
+	vertical-align:center;
+}
+
+/**********************************************************************/
+/*********************** Analysis Page ********************************/
+/**********************************************************************/
+#filter_criteria{
+	height: 230px;
+	margin-bottom: 0px; /*overwrite global*/
+}
+.sideblock.left{
+	float:left;
+	left: 20px;
+	right: 0;
+}
+
+#action_row{
+	float: left;
+	margin: 60px 0 0 80px;
+}
+.sideblock.right{
+	float:right;
+	right: 40px;
+}
+
+/**********************************************************************/
+/*********************** Activity Page ********************************/
+/**********************************************************************/
+#filter_criteria_activity{
+	height: 300px;
+}
+
+#system_a{
+	top:0px; 
+	background: url(../images/tab_system.png);
+}
+
+#activity{
+	top:100px; 
+	background: url(../images/tab_activity.png);
+}
+
+#user{
+	top:200px; 
+	background: url(../images/tab_user.png);
+}
+
+#filter_system_a, #filter_activity, #filter_user{
+	height: 300px;
+}
+
+/**********************************************************************/
+/*********************** Conformity Page ********************************/
+/**********************************************************************/
+#system_c{
+	top:0px; 
+	background: url(../images/tab_system.png);
+}
+#rule{
+	top:100px; 
+	background: url(../images/tab_rule.png);
+}
+#filter_system_c, #filter_rule{
+	height: 200px;
+}
+
+/* clearfix */
+#nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+#nav {
+	display: inline-block;
+} 
+html[xmlns] #nav {
+	display: block;
+}
+ 
+* html #nav {
+	height: 1%;
+}
